@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div id="display" placeholder="0"></div>
+            <div class="buttonList">
+                <button onclick="degtoradian()">DEG</button>
+                <button onclick="degtofeh()">F-E</button>
+            </div>
+            <div class="buttons">
+                    <div class="buttonExtra" onclick="mcclick()">MC</div>
+                    <div class="buttonExtra" onclick="mrclick()">MR</div>
+                    <div class="buttonExtra" onclick="mplus()">M+</div>
+                    <div class="buttonExtra" onclick="mminus()">M-</div>
+                    <div class="buttonExtra" onclick="msclick()">MS</div>
+            </div>
+            <div class="buttonList">
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown"><img src="https://img.icons8.com/ios-glyphs/30/000000/trigonometry.png"/>Trigonometry
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                            <li><a href="#" onclick="sintrigo()">sin</a></li>
+                            <li><a href="#" onclick="costrigo()">cos</a></li>
+                            <li><a href="#" onclick="tantrigo()">tan</a></li>
+                            <li><a href="#" onclick="asintrigo()">asin</a></li>
+                            <li><a href="#" onclick="acostrigo()">acos</a></li>
+                            <li><a href="#" onclick="atantrigo()">atan</a></li>
+                            </ul>
+                        </div>
+                            <div class="dropdown">
+                                <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown"><span>&#402;</span> Functions
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                <li><a href="#" onclick="ceilfun()">ceil</a></li>
+                                <li><a href="#" onclick="floorfun()">floor</a></li>
+                                <li><a href="#" onclick="randomfun()">random</a></li>
+                                <li><a href="#" onclick="truncfun()">trunc</a></li>
+                                </ul>
+                            </div>
+            </div>
+            <div class="buttons">    
+                    <div class="buttonExtra">2<sup>nd</sup></div>
+                    <div class="buttonExtra" onclick="pier()"><span>&#960;</span></div>
+                    <div class="buttonExtra" onclick="eValue()">e</div>
+                    <div class="button">C</div>
+                    <div class="button">&larr;</div>
+                    <div class="buttonExtra" onclick="square()">x<sup>2</sup></div>
+                    <div class="buttonExtra" onclick="inverse()">1/x</div>
+                    <div class="buttonExtra" onclick="absoulte()">|x|</div>
+                    <div class="buttonExtra" onclick="exponentional()">exp</div>
+                    <div class="buttonExtra" onclick="displayTxt('%')">mod</div>
+                    <div class="buttonExtra" value="&radic;" name="btnSqrt" onclick="squareroot()">&radic;<span style="text-decoration: overline;">x</span></div>
+                    <div class="button">(</div>
+                    <div class="button">)</div>
+                    <div class="buttonExtra" onclick="factorial()">n!</div>
+                    <div class="button">/</div>
+                    <div class="buttonExtra" value="**" name="power"  onclick="displayTxt('**')">x<sup>y</sup></div>
+                    <div class="button">7</div>
+                    <div class="button">8</div>
+                    <div class="button">9</div>
+                    <div class="button">*</div>
+                    <div class="buttonExtra" onclick="power10()">10<sup>x</sup></div>
+                    <div class="button">4</div>
+                    <div class="button">5</div>
+                    <div class="button">6</div>
+                    <div class="button">-</div>
+                    <div class="buttonExtra" onclick="log()">log</div>
+                    <div class="button">1</div>
+                    <div class="button">2</div>
+                    <div class="button">3</div>
+                    <div class="button">+</div>
+                    <div class="buttonExtra" onclick="logbasee()">ln</div>
+                    <div class="buttonExtra" onclick="signChange()">+/-</div>
+                    <div class="button">0</div>
+                    <div class="button">.</div>
+                    <div id="equal" class="button">=</div>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>    
+</body>
+</html>
