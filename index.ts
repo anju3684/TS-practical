@@ -7,7 +7,7 @@ let memory:any[] = [];
 let ms:number = 0;
 
 function mplus():void{
-    let num = display.innerText;
+    let num:number = parseFloat(display.innerText);
     memory.push(num);
 }
 
@@ -28,8 +28,8 @@ function mminus():void{
 
 function mrclick():void{
     if (memory.length !== 0) {
-    let sum = memory.reduce((a, b) => a + b);
-    display.innerText = sum;
+    let sum:number = memory.reduce((a, b) => a + b);
+    display.innerText = String(sum);
     } 
     else {
     display.innerText = String('0');
@@ -70,9 +70,8 @@ function squareroot():void{
     display.innerText=String(Math.sqrt(parseFloat(display.innerText)));
 }
 function signChange():void{
-    let plus=parseFloat(display.innerText);
+    let plus:number=parseFloat(display.innerText);
     let nem:number=plus* -1;
-    console.log(nem);
     display.innerText=String(nem);   
 }
 function log():void{
@@ -88,15 +87,15 @@ function factorial():void{
 }
 function square():void{
     let txt:number=parseFloat(display.innerText);
-    let squareNum=Math.pow(txt,2);
+    let squareNum:number=Math.pow(txt,2);
     display.innerText=String(squareNum);
 }
 function power():void{
     let txt:number=parseFloat(display.innerText);
-    let powerNum=txt**2;
+    let powerNum:number=txt**2;
     display.innerText=String(powerNum);
 }
-function displayTxt(txt):void{
+function displayTxt(txt:string):void{
     display.innerText+=txt;
 
 }

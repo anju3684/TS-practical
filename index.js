@@ -4,7 +4,7 @@ var e = Math.E;
 var memory = [];
 var ms = 0;
 function mplus() {
-    var num = display.innerText;
+    var num = parseFloat(display.innerText);
     memory.push(num);
 }
 function msclick() {
@@ -24,7 +24,7 @@ function mminus() {
 function mrclick() {
     if (memory.length !== 0) {
         var sum = memory.reduce(function (a, b) { return a + b; });
-        display.innerText = sum;
+        display.innerText = String(sum);
     }
     else {
         display.innerText = String('0');
@@ -65,7 +65,6 @@ function squareroot() {
 function signChange() {
     var plus = parseFloat(display.innerText);
     var nem = plus * -1;
-    console.log(nem);
     display.innerText = String(nem);
 }
 function log() {
