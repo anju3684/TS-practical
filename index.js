@@ -4,11 +4,11 @@ var e = Math.E;
 var memory = [];
 var ms = 0;
 function mplus() {
-    var num = display.innerText;
+    var num:number = parseFloat(display.innerText);
     memory.push(num);
 }
 function msclick() {
-    var txt;
+    var txt:number;
     if (ms === 0) {
         txt = parseFloat(display.innerText);
         ms = txt;
