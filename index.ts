@@ -28,8 +28,8 @@ function mminus():void{
 
 function mrclick():void{
     if (memory.length !== 0) {
-    let sum = memory.reduce((a, b) => a + b);
-    display.innerText = sum;
+    let sum:number = memory.reduce((a, b) => a + b);
+    display.innerText = String(sum);
     } 
     else {
     display.innerText = String('0');
@@ -88,12 +88,12 @@ function factorial():void{
 }
 function square():void{
     let txt:number=parseFloat(display.innerText);
-    let squareNum=Math.pow(txt,2);
+    let squareNum:number=Math.pow(txt,2);
     display.innerText=String(squareNum);
 }
 function power():void{
     let txt:number=parseFloat(display.innerText);
-    let powerNum=txt**2;
+    let powerNum:number=txt**2;
     display.innerText=String(powerNum);
 }
 function displayTxt(txt):void{
