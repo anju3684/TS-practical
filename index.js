@@ -10,7 +10,7 @@ function mplus() {
 function msclick() {
     var txt;
     if (ms === 0) {
-        txt = display.innerText;
+        txt = parseFloat(display.innerText);
         ms = txt;
         display.innerText = String(ms);
     }

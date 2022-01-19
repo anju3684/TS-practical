@@ -12,9 +12,9 @@ function mplus():void{
 }
 
 function msclick():void{
-    let txt;
+    let txt:number;
     if (ms === 0) {
-        txt = display.innerText;
+        txt = parseFloat(display.innerText);
         ms = txt;
         display.innerText = String(ms);
     } else {
@@ -71,7 +71,7 @@ function squareroot():void{
 }
 function signChange():void{
     let plus=parseFloat(display.innerText);
-    let nem=plus* -1;
+    let nem:number=plus* -1;
     console.log(nem);
     display.innerText=String(nem);   
 }
@@ -79,20 +79,20 @@ function log():void{
         display.innerText=String(Math.LOG10E);
 }
 function factorial():void{
-    let txt=parseInt(display.innerText);
-    let result=1;
+    let txt:number=parseInt(display.innerText);
+    let result:number=1;
     for(let i=0;i<txt;i++){
         result=result*(txt-i);
     }
     display.innerText=String(result);
 }
 function square():void{
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     let squareNum=Math.pow(txt,2);
     display.innerText=String(squareNum);
 }
 function power():void{
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     let powerNum=txt**2;
     display.innerText=String(powerNum);
 }
@@ -101,41 +101,41 @@ function displayTxt(txt):void{
 
 }
 function logbasee():void{
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     if(txt!=0){
         txt=Math.log(txt);
         display.innerText=String(txt);
     }
 }
 function power10():void{
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     txt=Math.pow(10,txt);
     display.innerText=String(txt);
 }
 function inverse():void{
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     txt=1/txt;
     display.innerText=String(txt);
 }
 function absoulte():void{
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     if(txt<0){
         txt=txt*(-1);
     }
     display.innerText=String(txt);
 }
 function exponentional():void{
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     txt=Math.exp(txt);
     display.innerText=String(txt);
 }
 function pier():void{
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     txt=txt*pie;
     display.innerText=String(txt);
 }
 function eValue():void{
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     if(txt!=0){
         txt=txt*e;
     }
@@ -145,61 +145,61 @@ function eValue():void{
     display.innerText=String(txt);
 }
 function sintrigo():void{
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     txt = Math.sin(txt * Math.PI / 180);
     display.innerText = String(txt);
 }
 function costrigo():void{
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     txt = Math.cos(txt * Math.PI / 180);
     display.innerText = String(txt);
 }
 function tantrigo():void{
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     txt = Math.tan(txt * Math.PI / 180);
     display.innerText = String(txt);
 }
 function ceilfun():void{
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     txt=Math.ceil(txt);
     display.innerText=String(txt);
 }
 function floorfun():void{
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     txt=Math.floor(txt);
     display.innerText=String(txt);
 }
 function randomfun():void{
-    let txt=Math.random();
+    let txt:number=Math.random();
     display.innerText+=txt;
 }
 function truncfun():void{
-    let txt=parseFloat(display.innerText);
-    let temp=txt.toFixed();
+    let txt:number=parseFloat(display.innerText);
+    let temp:String=txt.toFixed();
     display.innerText=String(temp);
 }
 function degtoradian():void{
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     txt=txt*Math.PI/180;
     display.innerText=String(txt);
 }
 let degtofeh=function(){
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     txt=(txt*9/5)+32;
     display.innerText=String(txt);
 }
 let acostrigo=function(){
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     txt = Math.acos(txt * Math.PI / 180);
     display.innerText = String(txt);
 }
 let asintrigo=function(){
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     txt = Math.asin(txt * Math.PI / 180);
     display.innerText = String(txt);
 }
 let atantrigo=function(){
-    let txt=parseFloat(display.innerText);
+    let txt:number=parseFloat(display.innerText);
     txt = Math.atan(txt * Math.PI / 180);
     display.innerText = String(txt);
 }
