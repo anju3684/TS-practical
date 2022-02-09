@@ -1,42 +1,47 @@
 var display = document.getElementById('display');
 var pie = 3.142;
 var e = Math.E;
-var memory = [];
-var ms = 0;
-function mplus() {
-<<<<<<< HEAD
-    var num = parseFloat(display.innerText);
-=======
-    var num:number = parseFloat(display.innerText);
->>>>>>> 00e1087186ff54d9376d131e72102771930db4ea
-    memory.push(num);
-}
-function msclick() {
-    var txt:number;
-    if (ms === 0) {
-        txt = parseFloat(display.innerText);
-        ms = txt;
-        display.innerText = String(ms);
+var ms = [];
+var index = 0;
+// function memory save
+var msclick = function () {
+    ms.push(parseInt(display.innerText));
+    display.innerText = "";
+};
+//function memory plus (M+)
+var mplus = function () {
+    if (ms.length == 0) {
+        alert("Nothing is stored in memory");
     }
     else {
-        display.innerText += ms;
+        var sum = ms.reduce(function (num12, num2) {
+            return num12 + num2;
+        }, 0);
+        return display.innerText = String(sum);
     }
-}
-function mminus() {
-    memory.pop();
-}
-function mrclick() {
-    if (memory.length !== 0) {
-        var sum = memory.reduce(function (a, b) { return a + b; });
-        display.innerText = String(sum);
+};
+//function memory minus
+var mminus = function () {
+    if (ms.length == 0) {
+        alert("Nothing is stored in memory");
+    }
+};
+//function memory recall 
+var mrclick = function () {
+    if (ms.length == 0) {
+        alert("Nothing is stored in memory");
     }
     else {
-        display.innerText = String('0');
+        index %= ms.length;
+        display.innerText = String(ms[index]);
+        index++;
     }
-}
-function mcclick() {
-    memory = [];
-}
+};
+//function memory clear
+var mcclick = function () {
+    ms.splice(0, ms.length);
+    display.innerText = "";
+};
 //@ts-ignore
 var buttons = Array.from(document.getElementsByClassName('button'));
 buttons.map(function (button) {

@@ -2,42 +2,48 @@ let display = <HTMLInputElement>document.getElementById('display');
 const pie:number=3.142;
 const e:number=Math.E;
 
+let ms: Array<number> = [];
+let index:number = 0;
+// function memory save
 
-let memory:any[] = [];
-let ms:number = 0;
-
-function mplus():void{
-    let num:number = parseFloat(display.innerText);
-    memory.push(num);
+let msclick = () =>{
+  ms.push(parseInt(display.innerText));
+  display.innerText = "";
 }
 
-function msclick():void{
-    let txt:number;
-    if (ms === 0) {
-        txt = parseFloat(display.innerText);
-        ms = txt;
-        display.innerText = String(ms);
+//function memory plus (M+)
+let mplus = () => {
+  if (ms.length == 0) {
+    alert("Nothing is stored in memory");
+  } else {
+    let sum: number = ms.reduce(function (num12: number, num2: number) {
+      return num12 + num2;
+    }, 0);
+    return display.innerText = String(sum);
+}
+}
+
+//function memory minus
+let mminus = () => {
+  if (ms.length == 0) {
+    alert("Nothing is stored in memory");
+  } 
+}
+//function memory recall 
+let mrclick = () => {
+    if (ms.length == 0) {
+      alert("Nothing is stored in memory");
     } else {
-    display.innerText += ms;
+      index %= ms.length;
+      display.innerText = String(ms[index]);
+      index++;
     }
 }
 
-function mminus():void{
-    memory.pop();
-}
-
-function mrclick():void{
-    if (memory.length !== 0) {
-    let sum:number = memory.reduce((a, b) => a + b);
-    display.innerText = String(sum);
-    } 
-    else {
-    display.innerText = String('0');
-    }
-}
-
-function mcclick():void{
-    memory = [];
+//function memory clear
+let mcclick = () => {
+  ms.splice(0, ms.length);
+  display.innerText = "";
 }
 
 //@ts-ignore
