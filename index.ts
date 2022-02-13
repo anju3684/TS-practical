@@ -2,7 +2,7 @@ let display = <HTMLInputElement>document.getElementById('display');
 const pie:number=3.142;
 const e:number=Math.E;
 
-let ms: Array<number> = [];
+let ms: number[] = [];
 let index:number = 0;
 // function memory save
 
@@ -16,18 +16,19 @@ let mplus = () => {
   if (ms.length == 0) {
     alert("Nothing is stored in memory");
   } else {
-    let sum: number = ms.reduce(function (num12: number, num2: number) {
-      return num12 + num2;
-    }, 0);
-    return display.innerText = String(sum);
-}
+    ms[0]=ms[0]+parseInt(display.innerText);
+    }
 }
 
 //function memory minus
 let mminus = () => {
+
   if (ms.length == 0) {
     alert("Nothing is stored in memory");
   } 
+  else{
+      ms[0]=ms[0]-parseInt(display.innerText);
+  }
 }
 //function memory recall 
 let mrclick = () => {

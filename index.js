@@ -14,16 +14,16 @@ var mplus = function () {
         alert("Nothing is stored in memory");
     }
     else {
-        var sum = ms.reduce(function (num12, num2) {
-            return num12 + num2;
-        }, 0);
-        return display.innerText = String(sum);
+        ms[0] = ms[0] + parseInt(display.innerText);
     }
 };
 //function memory minus
 var mminus = function () {
     if (ms.length == 0) {
         alert("Nothing is stored in memory");
+    }
+    else {
+        ms[0] = ms[0] - parseInt(display.innerText);
     }
 };
 //function memory recall 
